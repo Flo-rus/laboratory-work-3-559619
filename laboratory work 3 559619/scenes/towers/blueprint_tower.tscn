@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ds602mkgt7h2u"]
+
+[ext_resource type="Script" uid="uid://sp6qg4s1j6y0" path="res://scripts/BlueprintTower.cs" id="1_ptd1m"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_miume"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72ifs"]
+albedo_color = Color(0, 1, 1, 1)
+
+[node name="Tower" type="CharacterBody3D" unique_id=535390115 groups=["alias"]]
+script = ExtResource("1_ptd1m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=688504012]
+mesh = SubResource("CylinderMesh_miume")
+surface_material_override/0 = SubResource("StandardMaterial3D_72ifs")

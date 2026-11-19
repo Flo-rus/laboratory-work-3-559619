@@ -1,0 +1,12 @@
+MetallComponent
+MeshInstance3D
+GameManager
+Label
+CanvasLayer
+CharacterBody3D
+CollisionShape3D
+StaticBody3D
+Area3D
+Camera3D
+Node
+Sprite3D

@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bctv4qsdygm8o"]
+
+[ext_resource type="PackedScene" uid="uid://bk0lesdlpgwtx" path="res://scenes/player.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://bj3r10ycx067q" path="res://scenes/towers/enemy_tower.tscn" id="3_k0juu"]
+[ext_resource type="PackedScene" uid="uid://h3o7qvo1a815" path="res://scenes/core.tscn" id="4_71j4m"]
+[ext_resource type="PackedScene" uid="uid://7x8yf7asete8" path="res://scenes/towers/crawler.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://bxwtq3q1aqo7a" path="res://scenes/towers/tower1.tscn" id="5_71j4m"]
+
+[node name="world" type="Node3D" unique_id=84260362]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=142456680]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 27.961077, 0)
+
+[node name="player" parent="." unique_id=406451551 instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.902861, 0, 0)
+
+[node name="Tower2" parent="." unique_id=535390115 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.694454, 0, -11.916023)
+
+[node name="Tower4" parent="." unique_id=1079744851 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.836529, 0, -4.2997627)
+
+[node name="Tower6" parent="." unique_id=884233378 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.636208, 0, 4.7343903)
+
+[node name="Tower7" parent="." unique_id=885266276 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.694454, 0, -6.3587036)
+
+[node name="Tower8" parent="." unique_id=1002088194 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.836529, 0, 1.2575569)
+
+[node name="Tower9" parent="." unique_id=1983307489 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.636208, 0, 10.29171)
+
+[node name="Tower10" parent="." unique_id=678148880 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.522846, 0, -11.916023)
+
+[node name="Tower12" parent="." unique_id=1743227177 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4646, 0, 4.7343903)
+
+[node name="Tower13" parent="." unique_id=603573517 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.522846, 0, -6.3587036)
+
+[node name="Tower15" parent="." unique_id=846753080 instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4646, 0, 10.29171)
+
+[node name="Tower" parent="." unique_id=1842890406 instance=ExtResource("3_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.638477, 0, 1.785924)
+
+[node name="Core" parent="." unique_id=1504337247 instance=ExtResource("4_71j4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.155726, 0, -0.425148)
+
+[node name="Tower11" parent="." unique_id=966652974 instance=ExtResource("5_71j4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.855768, 0, -5.4554195)
+
+[node name="Tower14" parent="." unique_id=801046680 instance=ExtResource("5_71j4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.855768, 0, 4.0137577)

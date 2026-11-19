@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ccx8kvsg2krtq"]
+
+[ext_resource type="Script" uid="uid://ci3sd0nisv6ry" path="res://scripts/components/vision_component.cs" id="1_xssk3"]
+[ext_resource type="Script" uid="uid://b1ivxmlj2qojp" path="res://scripts/components/shoot_component.cs" id="2_fcffn"]
+[ext_resource type="PackedScene" uid="uid://ktmd8qafnk0o" path="res://scenes/bullets/bullet3.tscn" id="3_xssk3"]
+[ext_resource type="Script" uid="uid://d2a322o2c4d7v" path="res://scripts/components/health_component.cs" id="4_2c2yk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n7mfn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n7mfn"]
+radius = 33.880806
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n7mfn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xssk3"]
+albedo_color = Color(0, 0, 1, 1)
+
+[node name="Tower" type="CharacterBody3D" unique_id=535390115 groups=["alias"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1923334566]
+shape = SubResource("CapsuleShape3D_n7mfn")
+
+[node name="vision_component" type="Area3D" parent="." unique_id=899551518]
+script = ExtResource("1_xssk3")
+metadata/_custom_type_script = "uid://ci3sd0nisv6ry"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="vision_component" unique_id=584028734]
+shape = SubResource("SphereShape3D_n7mfn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=688504012]
+mesh = SubResource("CapsuleMesh_n7mfn")
+surface_material_override/0 = SubResource("StandardMaterial3D_xssk3")
+
+[node name="shoot_component" type="Node" parent="." unique_id=275476465 node_paths=PackedStringArray("vision_component")]
+script = ExtResource("2_fcffn")
+vision_component = NodePath("../vision_component")
+BulletScene = ExtResource("3_xssk3")
+metadata/_custom_type_script = "uid://b1ivxmlj2qojp"
+
+[node name="health_component" type="Node" parent="." unique_id=1093861380]
+script = ExtResource("4_2c2yk")
+metadata/_custom_type_script = "uid://d2a322o2c4d7v"

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://d0c70dxjibbjv"]
+
+[ext_resource type="Script" uid="uid://dt8ectew1n6er" path="res://scripts/Bullet.cs" id="1_e17in"]
+[ext_resource type="Script" uid="uid://bfbh32xqsof8u" path="res://scripts/components/explosive_component.cs" id="2_e17in"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n7mfn"]
+size = Vector3(4.17, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e17in"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n7mfn"]
+size = Vector3(4.1845703, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e5a5l"]
+size = Vector3(1, 1, 4.165)
+
+[node name="Area3D" type="Area3D" unique_id=1397154439 node_paths=PackedStringArray("damageComponent")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, 0, 0)
+script = ExtResource("1_e17in")
+damageComponent = NodePath("explosive_component")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2118868944]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7mfn")
+surface_material_override/0 = SubResource("StandardMaterial3D_e17in")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1149717577]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -0.0014648438, 0, 2.0816682e-16)
+shape = SubResource("BoxShape3D_n7mfn")
+
+[node name="explosive_component" type="Area3D" parent="." unique_id=1406392419]
+script = ExtResource("2_e17in")
+metadata/_custom_type_script = "uid://bfbh32xqsof8u"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="explosive_component" unique_id=748998806]
+shape = SubResource("BoxShape3D_e5a5l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://h3o7qvo1a815"]
+
+[ext_resource type="Script" uid="uid://d2a322o2c4d7v" path="res://scripts/components/health_component.cs" id="1_5634n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n7mfn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlnxp"]
+albedo_color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e0fjy"]
+size = Vector3(1.2, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilfid"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e5a5l"]
+size = Vector3(0.5, 0.5, 1.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pwmji"]
+size = Vector3(0.5, 1.2, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0fjy"]
+size = Vector3(1.2, 1.2, 1.2)
+
+[node name="Core" type="CharacterBody3D" unique_id=2083667160 groups=["alias", "game_cores"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=587305643]
+mesh = SubResource("BoxMesh_n7mfn")
+surface_material_override/0 = SubResource("StandardMaterial3D_qlnxp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=40745169]
+mesh = SubResource("BoxMesh_e0fjy")
+surface_material_override/0 = SubResource("StandardMaterial3D_ilfid")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1651840534]
+mesh = SubResource("BoxMesh_e5a5l")
+surface_material_override/0 = SubResource("StandardMaterial3D_ilfid")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D" unique_id=445597199]
+mesh = SubResource("BoxMesh_pwmji")
+surface_material_override/0 = SubResource("StandardMaterial3D_ilfid")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1655696782]
+shape = SubResource("BoxShape3D_e0fjy")
+
+[node name="health_component" type="Node" parent="." unique_id=1998227807]
+script = ExtResource("1_5634n")
+metadata/_custom_type_script = "uid://d2a322o2c4d7v"

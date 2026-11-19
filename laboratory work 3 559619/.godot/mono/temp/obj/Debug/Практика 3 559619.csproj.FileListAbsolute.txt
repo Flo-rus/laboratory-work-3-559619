@@ -1,0 +1,17 @@
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\Практика 3 559619.csproj.AssemblyReference.cache
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\Практика 3 559619.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\Практика 3 559619.AssemblyInfoInputs.cache
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\Практика 3 559619.AssemblyInfo.cs
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\Практика 3 559619.csproj.CoreCompileInputs.cache
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\bin\Debug\Практика 3 559619.deps.json
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\bin\Debug\Практика 3 559619.runtimeconfig.json
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\bin\Debug\Практика 3 559619.dll
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\bin\Debug\Практика 3 559619.pdb
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\________.A0D9AE7F.Up2Date
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\Практика 3 559619.dll
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\refint\Практика 3 559619.dll
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\Практика 3 559619.pdb
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\Практика 3 559619.genruntimeconfig.cache
+C:\Users\Artem\Documents\Godot\projects\практика-3-559619\.godot\mono\temp\obj\Debug\ref\Практика 3 559619.dll

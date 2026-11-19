@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://7x8yf7asete8"]
+
+[ext_resource type="Script" uid="uid://bai2q0mk30a7h" path="res://scripts/components/move_component.cs" id="1_nivbm"]
+[ext_resource type="Script" uid="uid://ci3sd0nisv6ry" path="res://scripts/components/vision_component.cs" id="2_02632"]
+[ext_resource type="Script" uid="uid://d2a322o2c4d7v" path="res://scripts/components/health_component.cs" id="3_jo04j"]
+[ext_resource type="Script" uid="uid://cy8d4vpdgwrmc" path="res://scripts/components/DamageComponent.cs" id="4_02632"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n7mfn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n7mfn"]
+radius = 33.817158
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfn8n"]
+albedo_color = Color(0.9661743, 0.12577361, 0.3579537, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n7mfn"]
+material = SubResource("StandardMaterial3D_dfn8n")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e0fjy"]
+radius = 1.0566406
+height = 2.1132813
+
+[node name="Tower" type="CharacterBody3D" unique_id=535390115 groups=["enemies"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1923334566]
+shape = SubResource("CapsuleShape3D_n7mfn")
+
+[node name="move_component" type="Node" parent="." unique_id=37166550 node_paths=PackedStringArray("vision_component")]
+script = ExtResource("1_nivbm")
+vision_component = NodePath("../vision_component")
+metadata/_custom_type_script = "uid://bai2q0mk30a7h"
+
+[node name="vision_component" type="Area3D" parent="." unique_id=899551518]
+script = ExtResource("2_02632")
+metadata/_custom_type_script = "uid://ci3sd0nisv6ry"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="vision_component" unique_id=584028734]
+shape = SubResource("SphereShape3D_n7mfn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=688504012]
+mesh = SubResource("CapsuleMesh_n7mfn")
+
+[node name="health_component" type="Node" parent="." unique_id=2100116286]
+script = ExtResource("3_jo04j")
+metadata/_custom_type_script = "uid://d2a322o2c4d7v"
+
+[node name="DamageComponent" type="Area3D" parent="." unique_id=1375289351]
+script = ExtResource("4_02632")
+metadata/_custom_type_script = "uid://cy8d4vpdgwrmc"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DamageComponent" unique_id=1896312561]
+shape = SubResource("CapsuleShape3D_e0fjy")
